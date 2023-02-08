@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
+import * as $ from "jquery";
+//import * as $ from "slick-carousel";
 
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss']
+  selector: 'app-home',
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.scss']
 })
-export class LoginComponent  {
+export class HomeComponent implements OnInit {
 
-email:String;
-password:String;
 
   constructor() {
     document.body.style.margin = "0";
@@ -16,16 +16,11 @@ password:String;
     document.body.style.height = "100vh";
     document.body.style.fontFamily = "Source Code Pro', monospace";
     document.body.style.background = "linear-gradient(#141e30, #243b55)";
-    
-    this.email='';
-    this.password='';
+   }
 
+  ngOnInit(): void {
+    window.location.href="#slide-1";
   }
 
 
-login(){
-  console.log('Email: ' +this.email);
-  console.log('Password: '+ this.password);
-};
-  
 }
